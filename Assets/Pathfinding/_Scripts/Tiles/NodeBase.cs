@@ -16,13 +16,17 @@ namespace _Scripts.Tiles {
         public float GetDistance(NodeBase other) => Coords.GetDistance(other.Coords); // Helper to reduce noise in pathfinding
         public bool Walkable { get; private set; }
 
-
+        public bool checkBoardClick = true;
         private bool _selected;
         private Color _defaultColor;
         public Transform selectedNew;
         private void Start()
         {
             Debug.Log(Walkable);
+        }
+        public virtual void Walk(bool walk)
+        {
+            Walkable = walk;
         }
         public virtual void Init(bool walkable, ICoords coords) {
             Walkable = walkable;
@@ -46,6 +50,7 @@ namespace _Scripts.Tiles {
         {
             if (Input.GetMouseButtonDown(0))
             {
+                if (checkBoardClick) return;
                 if (!Walkable) return;
                 Tarodev_Pathfinding._Scripts.Grid.GridManager.Instance.isTarget = false;
                 OnHoverTile?.Invoke(this);
@@ -53,6 +58,7 @@ namespace _Scripts.Tiles {
             }
             if (Input.GetMouseButtonDown(1))
             {
+                if (checkBoardClick) return;
                 if (!Walkable) return;
                 Tarodev_Pathfinding._Scripts.Grid.GridManager.Instance.isTarget = true;
                 OnHoverTile?.Invoke(this);

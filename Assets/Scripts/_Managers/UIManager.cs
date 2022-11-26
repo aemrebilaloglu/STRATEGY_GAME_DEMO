@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 
-namespace EKTemplate
-{
     public class UIManager : MonoBehaviour
     {
-        //public MainPanel mainPanel;
+        public GameObject barrack;
+        public GameObject powerPlant;
 
         #region Singleton
         public static UIManager instance = null;
@@ -19,13 +18,5 @@ namespace EKTemplate
 
         private void Start()
         {
-            //mainPanel.Active(true);
-            //LevelManager.instance.startEvent.AddListener(StartGame);
         }
-        public void StartGame()
-        {
-            //mainPanel.ActiveSmooth(false);
-        }
-      
-    }
 }

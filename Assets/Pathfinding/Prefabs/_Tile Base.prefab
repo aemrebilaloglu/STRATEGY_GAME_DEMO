@@ -183,7 +183,8 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 50eb941f09ea6ce46955c62f4303c4d0, type: 2}
-  m_sharedMaterial: {fileID: -6270700394805060885, guid: 50eb941f09ea6ce46955c62f4303c4d0, type: 2}
+  m_sharedMaterial: {fileID: -6270700394805060885, guid: 50eb941f09ea6ce46955c62f4303c4d0,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -353,7 +354,8 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 50eb941f09ea6ce46955c62f4303c4d0, type: 2}
-  m_sharedMaterial: {fileID: -6270700394805060885, guid: 50eb941f09ea6ce46955c62f4303c4d0, type: 2}
+  m_sharedMaterial: {fileID: -6270700394805060885, guid: 50eb941f09ea6ce46955c62f4303c4d0,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -466,7 +468,7 @@ GameObject:
   - component: {fileID: 6701998894798925630}
   m_Layer: 0
   m_Name: _Tile Base
-  m_TagString: Untagged
+  m_TagString: GridSquare
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -588,7 +590,8 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 50eb941f09ea6ce46955c62f4303c4d0, type: 2}
-  m_sharedMaterial: {fileID: -6270700394805060885, guid: 50eb941f09ea6ce46955c62f4303c4d0, type: 2}
+  m_sharedMaterial: {fileID: -6270700394805060885, guid: 50eb941f09ea6ce46955c62f4303c4d0,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

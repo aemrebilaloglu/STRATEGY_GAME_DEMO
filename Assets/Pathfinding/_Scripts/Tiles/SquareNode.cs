@@ -6,12 +6,10 @@ using UnityEngine;
 namespace _Scripts.Tiles {
     public class SquareNode : NodeBase
     {
-        public bool isObstacle = false;
         private static readonly List<Vector2> Dirs = new List<Vector2>() {
             new Vector2(0, 1), new Vector2(-1, 0), new Vector2(0, -1), new Vector2(1, 0),
             new Vector2(1, 1), new Vector2(1, -1), new Vector2(-1, -1), new Vector2(-1, 1)
         };
-
         public override void CacheNeighbors() {
             Neighbors = new List<NodeBase>();
 
@@ -19,12 +17,15 @@ namespace _Scripts.Tiles {
                 Neighbors.Add(tile);
             }
         }
-
-
         public override void Init(bool walkable, ICoords coords) {
             base.Init(walkable, coords);
             
             _renderer.transform.rotation = Quaternion.Euler(0, 0, 90 * Random.Range(0, 4));
+        }
+        public override void Walk(bool walk)
+        {
+            base.Walk(walk);
+            walk = false;
         }
     }
 }

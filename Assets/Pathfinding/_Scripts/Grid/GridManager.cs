@@ -71,7 +71,6 @@ namespace Tarodev_Pathfinding._Scripts.Grid {
 
         public void SpawnUnits() {
             //_playerNodeBase = Tiles.Where(t => t.Value.Walkable).OrderBy(t => Random.value).First().Value;
-            Debug.Log(Random.value);
             _spawnedPlayer = Instantiate(_unitPrefab, new Vector3(50, 50, 50), Quaternion.identity);
             _spawnedPlayer.Init(_playerSprite);
 
