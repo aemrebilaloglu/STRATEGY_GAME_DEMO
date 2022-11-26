@@ -22,9 +22,8 @@ public class InformationManager : MonoBehaviour
     public TextMeshProUGUI informationHead;
     public TextMeshProUGUI informationTextOne;
     public TextMeshProUGUI informationTextTwo;
-    public TextMeshProUGUI informationTextThree;
-    public TextMeshProUGUI informationTexFour;
     public GameObject selectedImage;
+    public GameObject soldierImage;
     public GameObject panelObj;
     public Transform selectedObj;
 }

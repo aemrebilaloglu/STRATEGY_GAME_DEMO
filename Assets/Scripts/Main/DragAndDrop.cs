@@ -84,7 +84,7 @@ public class DragAndDrop : MonoBehaviour/*,IDragHandler,IBeginDragHandler,IEndDr
 
                 for (int i = 0; i < gridList.Count; i++)
                 {
-                    gridList[i].transform.parent.GetComponent<_Scripts.Tiles.NodeBase>().Walk(false);
+                    gridList[i].transform.parent.GetComponent<NodeBase>().Walk(false);
                     gridList[i].transform.parent.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1f, 0.12f, 0f, 1);
                 }
                 gridList.Clear();

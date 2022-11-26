@@ -4,7 +4,6 @@ using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using DG.Tweening;
-namespace _Scripts.Tiles {
     public abstract class NodeBase : MonoBehaviour {
         [Header("References")] [SerializeField]
         private Color _obstacleColor;
@@ -20,10 +19,6 @@ namespace _Scripts.Tiles {
         private bool _selected;
         private Color _defaultColor;
         public Transform selectedNew;
-        private void Start()
-        {
-            Debug.Log(Walkable);
-        }
         public virtual void Walk(bool walk)
         {
             Walkable = walk;
@@ -50,17 +45,17 @@ namespace _Scripts.Tiles {
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if (checkBoardClick) return;
+                //if (checkBoardClick) return;
                 if (!Walkable) return;
-                Tarodev_Pathfinding._Scripts.Grid.GridManager.Instance.isTarget = false;
+                GridManager.Instance.isTarget = false;
                 OnHoverTile?.Invoke(this);
                 Debug.Log("sol");
             }
             if (Input.GetMouseButtonDown(1))
             {
-                if (checkBoardClick) return;
+                //if (checkBoardClick) return;
                 if (!Walkable) return;
-                Tarodev_Pathfinding._Scripts.Grid.GridManager.Instance.isTarget = true;
+                GridManager.Instance.isTarget = true;
                 OnHoverTile?.Invoke(this);
                 Debug.Log("sag");
               
@@ -112,7 +107,6 @@ namespace _Scripts.Tiles {
 
         #endregion
     }
-}
 
 
 public interface ICoords {

@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 
-namespace EKTemplate
-{
     public class DataManager : MonoBehaviour
     {
         private readonly string MONEY_DATA = "money";
@@ -46,4 +44,3 @@ namespace EKTemplate
             sound = isOn;
         }
     }
-}

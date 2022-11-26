@@ -3,8 +3,6 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using DG.Tweening;
 
-namespace EKTemplate
-{
     //[RequireComponent(typeof(/*NonDrawingGraphic*/))]
     public class InputManager : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
@@ -231,4 +229,3 @@ namespace EKTemplate
         // }
         #endregion
     }
-}

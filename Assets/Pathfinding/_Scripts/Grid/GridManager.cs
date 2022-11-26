@@ -1,14 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
-using _Scripts.Tiles;
-using Tarodev_Pathfinding._Scripts.Grid.Scriptables;
-using Tarodev_Pathfinding._Scripts.Units;
 using UnityEngine;
 using DG.Tweening;
 using System.Collections;
 using Random = UnityEngine.Random;
 
-namespace Tarodev_Pathfinding._Scripts.Grid {
     public class GridManager : MonoBehaviour {
         public static GridManager Instance;
 
@@ -70,7 +66,6 @@ namespace Tarodev_Pathfinding._Scripts.Grid {
         }
 
         public void SpawnUnits() {
-            //_playerNodeBase = Tiles.Where(t => t.Value.Walkable).OrderBy(t => Random.value).First().Value;
             _spawnedPlayer = Instantiate(_unitPrefab, new Vector3(50, 50, 50), Quaternion.identity);
             _spawnedPlayer.Init(_playerSprite);
 
@@ -89,4 +84,3 @@ namespace Tarodev_Pathfinding._Scripts.Grid {
             }
         }
     }
-}

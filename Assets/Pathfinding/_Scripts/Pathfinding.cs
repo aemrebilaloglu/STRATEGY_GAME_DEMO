@@ -1,11 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using _Scripts.Tiles;
 using UnityEngine;
 using DG.Tweening;
 
-namespace Tarodev_Pathfinding._Scripts {
     public static class Pathfinding {
         private static readonly Color PathColor = new Color(0.65f, 0.35f, 0.35f);
         //private static readonly Color OpenColor = new Color(.4f, .6f, .4f);
@@ -59,4 +57,3 @@ namespace Tarodev_Pathfinding._Scripts {
             return null;
         }
     }
-}

@@ -3,8 +3,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Threading.Tasks;
 
-namespace EKTemplate
-{
     public class DelayManager : MonoBehaviour
     {
         private List<DelayHandler> delayQueue = new List<DelayHandler>();
@@ -56,4 +54,3 @@ namespace EKTemplate
             await Task.Delay((int)(duration * 1000f));
         }
     }
-}

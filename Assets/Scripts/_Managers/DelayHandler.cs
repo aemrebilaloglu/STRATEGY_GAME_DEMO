@@ -2,8 +2,6 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace EKTemplate
-{
     public class DelayHandler : MonoBehaviour
     {
         public void Cancel()
@@ -42,4 +40,3 @@ namespace EKTemplate
             if (delayCor != null) StopCoroutine(delayCor);
         }
     }
-}

@@ -10,8 +10,4 @@ public class Barrack : Buildings
     {
 
     }
-   public void ProductionButton()
-    {
-        Debug.Log("Click btn");
-    }
 }

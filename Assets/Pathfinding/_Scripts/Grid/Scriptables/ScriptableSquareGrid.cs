@@ -1,9 +1,6 @@
 using System.Collections.Generic;
-using _Scripts.Tiles;
 using UnityEngine;
 
-namespace Tarodev_Pathfinding._Scripts.Grid.Scriptables {
-    [CreateAssetMenu(fileName = "New Scriptable Square Grid")]
     public class ScriptableSquareGrid : ScriptableGrid
     {
         [SerializeField,Range(3,50)] private int _gridWidth = 16;
@@ -26,4 +23,3 @@ namespace Tarodev_Pathfinding._Scripts.Grid.Scriptables {
             return tiles;
         }
     }
-}

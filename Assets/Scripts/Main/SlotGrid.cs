@@ -12,7 +12,7 @@ public class SlotGrid : MonoBehaviour
     {
         if (other.CompareTag("Barrack"))
         {
-            if (transform.parent.GetComponent<_Scripts.Tiles.SquareNode>().Walkable)
+            if (transform.parent.GetComponent<SquareNode>().Walkable)
             {
                 isGreen = true;
                 drop = other.GetComponent<DragAndDrop>();
@@ -38,7 +38,7 @@ public class SlotGrid : MonoBehaviour
     {
         if (other.CompareTag("Barrack"))
         {
-            if (transform.parent.GetComponent<_Scripts.Tiles.SquareNode>().Walkable)
+            if (transform.parent.GetComponent<SquareNode>().Walkable)
             {
                 isGreen = false;
                 drop.gridList.Remove(gameObject);

@@ -1,9 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
-using Tarodev_Pathfinding._Scripts.Grid;
 using UnityEngine;
 
-namespace _Scripts.Tiles {
     public class SquareNode : NodeBase
     {
         private static readonly List<Vector2> Dirs = new List<Vector2>() {
@@ -28,19 +26,14 @@ namespace _Scripts.Tiles {
             walk = false;
         }
     }
-}
-
 
 public struct SquareCoords : ICoords {
 
     public float GetDistance(ICoords other) {
         var dist = new Vector2Int(Mathf.Abs((int)Pos.x - (int)other.Pos.x), Mathf.Abs((int)Pos.y - (int)other.Pos.y));
-
         var lowest = Mathf.Min(dist.x, dist.y);
         var highest = Mathf.Max(dist.x, dist.y);
-
         var horizontalMovesRequired = highest - lowest;
-
         return lowest * 14 + horizontalMovesRequired * 10 ;
     }
 

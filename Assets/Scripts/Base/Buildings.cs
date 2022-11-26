@@ -13,19 +13,17 @@ public class Buildings : MonoBehaviour
             InformationManager.instance.informationHead.text = "Barrack";
             InformationManager.instance.informationTextOne.text = "Level : MAX";
             InformationManager.instance.informationTextTwo.text = "Spawn : MAX";
-            InformationManager.instance.informationTextThree.text = "Capacity : MAX";
-            InformationManager.instance.informationTexFour.text = "Can Be Placed : YES";
+            InformationManager.instance.soldierImage.SetActive(true);
+
         }
         else if(GetComponent<Image>().sprite.name == "PowerPlant")
         {
-            Debug.Log("Power");
             InformationManager.instance.panelObj.SetActive(true);
             InformationManager.instance.selectedImage.GetComponent<Image>().sprite = GetComponent<Image>().sprite;
             InformationManager.instance.informationHead.text = "Power Plant";
             InformationManager.instance.informationTextOne.text = "Power : MAX";
             InformationManager.instance.informationTextTwo.text = "Capacity : MAX";
-            InformationManager.instance.informationTextThree.text = "Production : MAX";
-            InformationManager.instance.informationTexFour.text = "Can Be Placed : YES";
+            InformationManager.instance.soldierImage.SetActive(false);
         }
     }
     public void ProductionReplacement()
