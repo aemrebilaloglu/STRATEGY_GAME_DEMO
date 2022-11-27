@@ -32,6 +32,7 @@ public class SlotGrid : MonoBehaviour
                         drop.gridList[i].transform.parent.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0.16f, 1, 0.12f, 1);
                     }
                 }
+                Debug.Log("zaa");
             }
         }
         if (other.CompareTag("Soldier"))

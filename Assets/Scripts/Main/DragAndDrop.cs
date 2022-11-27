@@ -110,7 +110,10 @@ public class DragAndDrop : MonoBehaviour/*,IDragHandler,IBeginDragHandler,IEndDr
                     {
                         gridList[i].transform.parent.GetComponent<NodeBase>().SoldierCheck(true);
                     }
-                    gridList[i].transform.parent.GetComponent<NodeBase>().Walk(false);
+                    else
+                    {
+                        gridList[i].transform.parent.GetComponent<NodeBase>().Walk(false);
+                    }
                     gridList[i].transform.parent.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1f, 0.12f, 0f, 1);
                 }
                 gridList.Clear();

@@ -58,6 +58,7 @@ using DG.Tweening;
                 GridManager.Instance.isTarget = false;
                 BarracksManager.instance.soldierMove = true;
                 OnHoverTile?.Invoke(this);
+
             }
         }
         if (Input.GetMouseButtonDown(1))

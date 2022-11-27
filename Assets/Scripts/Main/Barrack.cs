@@ -38,10 +38,6 @@ public class Barrack : Buildings
             SoldierSlot.instance.soldierSlot[bm.soldierCount].SetActive(true);
         }
     }
-    void Update()
-    {
-
-    }
     public void Production()
     {
         InformationManager.instance.panelObj.SetActive(true);
