@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GridSquare
   - Barrack
+  - Soldier
   layers:
   - Default
   - TransparentFX

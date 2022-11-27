@@ -20,8 +20,6 @@ public class InformationManager : MonoBehaviour
     }
     #endregion
     public TextMeshProUGUI informationHead;
-    public TextMeshProUGUI informationTextOne;
-    public TextMeshProUGUI informationTextTwo;
     public GameObject selectedImage;
     public GameObject soldierImage;
     public GameObject panelObj;

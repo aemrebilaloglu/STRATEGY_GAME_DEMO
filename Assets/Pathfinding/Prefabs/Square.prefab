@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3667276361323659747}
   m_Layer: 0
   m_Name: x
-  m_TagString: Untagged
+  m_TagString: GridSquare
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150c784ea5689834a93c37e532e716b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGreen: 0
+  isSoldier: 0
 --- !u!54 &8365605263345472182
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -404,4 +406,3 @@ MonoBehaviour:
   _fCostText: {fileID: 2600935376583277710}
   _gCostText: {fileID: 1562731440161903270}
   _hCostText: {fileID: 4777784757582201696}
-  isObstacle: 0

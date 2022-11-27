@@ -94,6 +94,20 @@ namespace PooledScrollList.Controller
 
             ElementSize = ScrollRect.vertical ? Template.RectTransform.rect.height : Template.RectTransform.rect.width;
         }
+        protected virtual void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                if (DataProvider != null)
+                {
+                    Initialize(DataProvider.GetData());
+                }
+                else
+                {
+                    Initialize();
+                }
+            }
+        }
         protected virtual void Start()
         {
             if (DataProvider != null)

@@ -7,6 +7,7 @@ public class SlotGrid : MonoBehaviour
 {
     DragAndDrop drop;
     public bool isGreen = false;
+    public bool isSoldier = false;
    
     private void OnTriggerEnter(Collider other)
     {
@@ -33,6 +34,10 @@ public class SlotGrid : MonoBehaviour
                 }
             }
         }
+        if (other.CompareTag("Soldier"))
+        {
+            transform.parent.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0.64f, 0.58f, 0.287f, 1);
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -44,6 +49,10 @@ public class SlotGrid : MonoBehaviour
                 drop.gridList.Remove(gameObject);
                 transform.parent.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0.64f, 0.58f, 0.287f, 1);
             }
+        }
+        if (other.CompareTag("Soldier"))
+        {
+           transform.parent.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0.64f, 0.58f, 0.287f, 1);         
         }
     }
 }

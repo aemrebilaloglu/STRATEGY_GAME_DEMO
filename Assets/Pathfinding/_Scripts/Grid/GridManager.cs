@@ -5,7 +5,7 @@ using DG.Tweening;
 using System.Collections;
 using Random = UnityEngine.Random;
 
-    public class GridManager : MonoBehaviour {
+        public class GridManager : MonoBehaviour {
         public static GridManager Instance;
 
         [SerializeField] private Sprite _playerSprite, _goalSprite;
@@ -51,12 +51,17 @@ using Random = UnityEngine.Random;
 
                 IEnumerator DelayMoveToPath()
                 {
+                    BarracksManager.instance.onMove = true;
                     for (int i = 0; i < Pathfinding.path.Count; i++)
                     {
                         _spawnedPlayer.transform.DOMove(Pathfinding.path[i].transform.position, 0.25f);
 
                         yield return new WaitForSeconds(0.25f);
                     }
+                    BarracksManager.instance.SoldierUnit.transform.GetChild(1).parent = null;
+
+                    BarracksManager.instance.soldierMove = false;
+                    BarracksManager.instance.onMove = false;
 
                     _playerNodeBase = nodeBase;
                     _spawnedPlayer.transform.position = _goalNodeBase.Coords.Pos;
@@ -65,22 +70,14 @@ using Random = UnityEngine.Random;
             }
         }
 
-        public void SpawnUnits() {
-            _spawnedPlayer = Instantiate(_unitPrefab, new Vector3(50, 50, 50), Quaternion.identity);
-            _spawnedPlayer.Init(_playerSprite);
-
-            _spawnedGoal = Instantiate(_unitPrefab, new Vector3(50, 50, 50), Quaternion.identity);
-            _spawnedGoal.Init(_goalSprite);
-        }
-
-        public NodeBase GetTileAtPosition(Vector2 pos) => Tiles.TryGetValue(pos, out var tile) ? tile : null;
-
-        private void OnDrawGizmos() {
-            if (!Application.isPlaying || !_drawConnections) return;
-            Gizmos.color = Color.red;
-            foreach (var tile in Tiles) {
-                if (tile.Value.Connection == null) continue;
-                Gizmos.DrawLine((Vector3)tile.Key + new Vector3(0, 0, -1), (Vector3)tile.Value.Connection.Coords.Pos + new Vector3(0, 0, -1));
-            }
-        }
+    public void SpawnUnits()
+    {
+        _spawnedPlayer = Instantiate(_unitPrefab, new Vector3(50, 50, 50), Quaternion.identity);
+        _spawnedPlayer.Init(_playerSprite);
+        BarracksManager.instance.SoldierUnit = _spawnedPlayer;
+        _spawnedGoal = Instantiate(_unitPrefab, new Vector3(50, 50, 50), Quaternion.identity);
     }
+
+    public NodeBase GetTileAtPosition(Vector2 pos) => Tiles.TryGetValue(pos, out var tile) ? tile : null;
+
+}

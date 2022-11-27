@@ -13,6 +13,15 @@ namespace PooledScrollList.Example
         public int Count;
         public List<Sprite> Colors;
 
+        
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                Count = 3;
+            }
+        }
+       
         public override List<PooledData> GetData()
         {
             var data = new List<PooledData>(Count);

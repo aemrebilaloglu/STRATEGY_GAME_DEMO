@@ -25,7 +25,12 @@ using UnityEngine;
             base.Walk(walk);
             walk = false;
         }
-    }
+        public override void SoldierCheck(bool _soldier)
+        {
+            base.SoldierCheck(_soldier);
+            _soldier = false;
+        }
+}
 
 public struct SquareCoords : ICoords {
 

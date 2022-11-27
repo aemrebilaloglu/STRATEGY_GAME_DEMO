@@ -11,6 +11,7 @@ public class DragAndDrop : MonoBehaviour/*,IDragHandler,IBeginDragHandler,IEndDr
     public List<GameObject> gridList = new List<GameObject>();
     public bool isBarrack = false;
     public bool isPowerPlant = false;
+    public bool isSoldier = false;
     public int correctGridCount; // Barrack = 16, PowerPlant = 6
     void Start()
     {
@@ -41,6 +42,14 @@ public class DragAndDrop : MonoBehaviour/*,IDragHandler,IBeginDragHandler,IEndDr
 
         transform.parent.position = NewWorldPosition;
         transform.parent.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.65f);
+       
+    }
+    private void OnMouseDown()
+    {
+        if (isSoldier)
+        {
+            transform.GetComponent<BoxCollider>().size = new Vector3(0.015f, 0.015f, 1);
+        }
     }
     public void CorrectGrid()
     {
@@ -78,12 +87,29 @@ public class DragAndDrop : MonoBehaviour/*,IDragHandler,IBeginDragHandler,IEndDr
                     {
                         Instantiate(Resources.Load("SpawnPower"), new Vector3(xPos, yPos, 0), Quaternion.identity);
                     }
-                        transform.parent.position = new Vector3(50, 50, 0);
+                    else if (isSoldier)
+                    {
+                        Instantiate(Resources.Load("SpawnSoldier"), new Vector3(xPos, yPos, 0), Quaternion.identity);
+                        transform.GetComponent<BoxCollider>().size = new Vector3(0.5f, 1f, 1f);
+
+                        SoldierSlot.instance.soldierSlot[BarracksManager.instance.soldierCount].SetActive(false);
+                        BarracksManager.instance.soldierCount--;
+
+                        if (BarracksManager.instance.SoldierUnit.transform.childCount>1)
+                        {
+                            BarracksManager.instance.SoldierUnit.transform.GetChild(1).parent = null;
+                        }
+                    }
+                    transform.parent.position = new Vector3(50, 50, 0);
                 });
                 transform.parent.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1f);
 
                 for (int i = 0; i < gridList.Count; i++)
                 {
+                    if (isSoldier)
+                    {
+                        gridList[i].transform.parent.GetComponent<NodeBase>().SoldierCheck(true);
+                    }
                     gridList[i].transform.parent.GetComponent<NodeBase>().Walk(false);
                     gridList[i].transform.parent.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1f, 0.12f, 0f, 1);
                 }
@@ -93,6 +119,10 @@ public class DragAndDrop : MonoBehaviour/*,IDragHandler,IBeginDragHandler,IEndDr
         else
         {
             transform.parent.position = new Vector3(50, 50, 0); // out
+            if (isSoldier)
+            {
+                transform.GetComponent<BoxCollider>().size = new Vector3(0.5f, 1f, 1f);
+            }
         }
     }
     private void OnMouseUp()

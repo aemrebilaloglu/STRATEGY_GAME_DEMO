@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Soldier : MonoBehaviour
 {
-    void Start()
+    public void Production()
     {
-        
-    }
-    void Update()
-    {
-        
+        if (BarracksManager.instance.SoldierUnit.transform.childCount < 2)
+        {
+            BarracksManager.instance.soldierMove = true;
+            transform.SetParent(BarracksManager.instance.SoldierUnit.transform);
+        }
     }
 }
