@@ -1,10 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 public class InformationManager : MonoBehaviour
 {
+    public TextMeshProUGUI informationHead;
+    public GameObject selectedImage;
+    public GameObject soldierImage;
+    public GameObject panelObj;
+    public Transform selectedObj;
     #region Singleton
     public static InformationManager instance = null;
     private void Awake()
@@ -19,9 +21,4 @@ public class InformationManager : MonoBehaviour
         }
     }
     #endregion
-    public TextMeshProUGUI informationHead;
-    public GameObject selectedImage;
-    public GameObject soldierImage;
-    public GameObject panelObj;
-    public Transform selectedObj;
 }

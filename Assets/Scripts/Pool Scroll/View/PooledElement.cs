@@ -1,6 +1,5 @@
 ﻿using PooledScrollList.Data;
 using UnityEngine;
-
 namespace PooledScrollList.View
 {
     [RequireComponent(typeof(PooledView))]
@@ -9,7 +8,6 @@ namespace PooledScrollList.View
     {
         private PooledView _pooledView;
         private RectTransform _rectTransform;
-
         public PooledView PooledView
         {
             get
@@ -18,11 +16,9 @@ namespace PooledScrollList.View
                 {
                     _pooledView = GetComponent<PooledView>();
                 }
-
                 return _pooledView;
             }
         }
-
         public RectTransform RectTransform
         {
             get
@@ -31,11 +27,9 @@ namespace PooledScrollList.View
                 {
                     _rectTransform = GetComponent<RectTransform>();
                 }
-
                 return _rectTransform;
             }
         }
-
         public PooledData Data
         {
             get => PooledView.Data;

@@ -1,14 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 public class PowerPlant : Buildings
 {
-    void Start()
+    public void Production()
     {
-        
-    }
-    void Update()
-    {
-        
+      CheckNames();
     }
 }

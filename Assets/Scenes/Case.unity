@@ -3578,7 +3578,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 0
-  sound: 0
 --- !u!114 &1949849997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3592,6 +3591,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soldierCount: -1
+  SoldierUnit: {fileID: 0}
+  soldierMove: 0
+  onMove: 0
 --- !u!1 &2044802309
 GameObject:
   m_ObjectHideFlags: 0
@@ -4413,7 +4415,6 @@ MonoBehaviour:
   _unitPrefab: {fileID: 1861827098908198204, guid: ff1baa9d98e6c1740847175b765ededf,
     type: 3}
   _scriptableGrid: {fileID: 11400000, guid: f17361ff6af792b4d989ad473d7f8e04, type: 2}
-  _drawConnections: 1
   isTarget: 0
 --- !u!4 &7341151216655383299
 Transform:

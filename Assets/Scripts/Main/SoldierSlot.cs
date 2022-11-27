@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class SoldierSlot : MonoBehaviour
+public class SoldierSlot : Soldier
 {
     #region Singleton
     public static SoldierSlot instance = null;

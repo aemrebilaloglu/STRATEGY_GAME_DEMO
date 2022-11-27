@@ -3,8 +3,6 @@ using JetBrains.Annotations;
 using PooledScrollList.Controller;
 using PooledScrollList.Data;
 using UnityEngine;
-using UnityEngine.UI;
-
 namespace PooledScrollList.Example
 {
     public class PooledDataProviderExample : PooledDataProvider
@@ -12,8 +10,6 @@ namespace PooledScrollList.Example
         public PooledScrollRectBase ScrollRectController;
         public int Count;
         public List<Sprite> Colors;
-
-        
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.T))
@@ -21,7 +17,6 @@ namespace PooledScrollList.Example
                 Count = 3;
             }
         }
-       
         public override List<PooledData> GetData()
         {
             var data = new List<PooledData>(Count);
@@ -35,10 +30,8 @@ namespace PooledScrollList.Example
 
                 });
             }
-
             return data;
         }
-
         [UsedImplicitly]
         public void Apply()
         {

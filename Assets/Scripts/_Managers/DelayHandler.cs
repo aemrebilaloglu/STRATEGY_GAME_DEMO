@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-
     public class DelayHandler : MonoBehaviour
     {
         public void Cancel()
@@ -9,7 +8,6 @@ using UnityEngine.Events;
             if (delayCor != null) StopCoroutine(delayCor);
             Destroy(this);
         }
-
         public void SetDelay(float duration, UnityAction onComplete)
         {
             if (delayCor == null) delayCor = StartCoroutine(Delay(duration, onComplete));
@@ -22,7 +20,6 @@ using UnityEngine.Events;
             onComplete?.Invoke();
             Destroy(this);
         }
-
         public void SetDelay(int frameCount, UnityAction onComplete)
         {
             if (delayCor == null) delayCor = StartCoroutine(Delay(frameCount, onComplete));
@@ -34,7 +31,6 @@ using UnityEngine.Events;
             onComplete?.Invoke();
             Destroy(this);
         }
-
         private void OnDestroy()
         {
             if (delayCor != null) StopCoroutine(delayCor);

@@ -6,7 +6,6 @@ namespace PooledScrollList.Controller
     public class PooledScrollRectController : PooledScrollRectBase
     {
         private LayoutElement _spaceElement;
-
         protected override void Awake()
         {
             base.Awake();
@@ -20,7 +19,7 @@ namespace PooledScrollList.Controller
             }
             else
             {
-                Debug.LogWarning("Failed to get HorizontalOrVerticalLayoutGroup assigned to ScrollRect's content. PooledScrollRectController won't work as expected.");
+                Debug.LogWarning("-");
             }
 
             _spaceElement = CreateSpaceElement(ScrollRect, 0f);
@@ -51,7 +50,6 @@ namespace PooledScrollList.Controller
 
             LastElementsCulledAbove = elementsCulledAbove;
         }
-
         protected override void AdjustSpaceElement(float size)
         {
             if (size <= 0)
@@ -75,7 +73,6 @@ namespace PooledScrollList.Controller
 
             _spaceElement.transform.SetSiblingIndex(0);
         }
-
         protected override void ReorientElement(ReorientMethod reorientMethod, int elementsCulledAbove)
         {
             if (ActiveElements.Count <= 1)

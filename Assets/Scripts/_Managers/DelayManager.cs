@@ -2,11 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Threading.Tasks;
-
     public class DelayManager : MonoBehaviour
     {
         private List<DelayHandler> delayQueue = new List<DelayHandler>();
-
         #region Singleton
         public static DelayManager instance = null;
         private void Awake()
@@ -22,7 +20,6 @@ using System.Threading.Tasks;
             }
         }
         #endregion
-
         public DelayHandler Set(float duration, UnityAction onComplete)
         {
             DelayHandler dh = gameObject.AddComponent<DelayHandler>();
@@ -35,7 +32,6 @@ using System.Threading.Tasks;
 
             return dh;
         }
-
         public DelayHandler Set(int frameCount, UnityAction onComplete)
         {
             DelayHandler dh = gameObject.AddComponent<DelayHandler>();
@@ -48,7 +44,6 @@ using System.Threading.Tasks;
 
             return dh;
         }
-
         public async Task SetAsync(float duration)
         {
             await Task.Delay((int)(duration * 1000f));

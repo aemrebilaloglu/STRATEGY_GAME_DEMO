@@ -1,37 +1,35 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+public class SquareNode : NodeBase
+{
+    private static readonly List<Vector2> Dirs = new List<Vector2>() {
+        new Vector2(0, 1), new Vector2(-1, 0), new Vector2(0, -1), new Vector2(1, 0),
+        new Vector2(1, 1), new Vector2(1, -1), new Vector2(-1, -1), new Vector2(-1, 1)
+    };
+    public override void CacheNeighbors() {
+    Neighbors = new List<NodeBase>();
 
-    public class SquareNode : NodeBase
-    {
-        private static readonly List<Vector2> Dirs = new List<Vector2>() {
-            new Vector2(0, 1), new Vector2(-1, 0), new Vector2(0, -1), new Vector2(1, 0),
-            new Vector2(1, 1), new Vector2(1, -1), new Vector2(-1, -1), new Vector2(-1, 1)
-        };
-        public override void CacheNeighbors() {
-            Neighbors = new List<NodeBase>();
-
-            foreach (var tile in Dirs.Select(dir => GridManager.Instance.GetTileAtPosition(Coords.Pos + dir)).Where(tile => tile != null)) {
-                Neighbors.Add(tile);
-            }
+        foreach (var tile in Dirs.Select(dir => GridManager.Instance.GetTileAtPosition(Coords.Pos + dir)).Where(tile => tile != null)) {
+            Neighbors.Add(tile);
         }
-        public override void Init(bool walkable, ICoords coords) {
-            base.Init(walkable, coords);
+    }
+    public override void Init(bool walkable, ICoords coords) {
+        base.Init(walkable, coords);
             
-            _renderer.transform.rotation = Quaternion.Euler(0, 0, 90 * Random.Range(0, 4));
-        }
-        public override void Walk(bool walk)
-        {
-            base.Walk(walk);
-            walk = false;
-        }
-        public override void SoldierCheck(bool _soldier)
-        {
-            base.SoldierCheck(_soldier);
-            _soldier = false;
-        }
+        _renderer.transform.rotation = Quaternion.Euler(0, 0, 90 * Random.Range(0, 4));
+    }
+    public override void Walk(bool walk)
+    {
+        base.Walk(walk);
+        walk = false;
+    }
+    public override void SoldierCheck(bool _soldier)
+    {
+        base.SoldierCheck(_soldier);
+        _soldier = false;
+    }
 }
-
 public struct SquareCoords : ICoords {
 
     public float GetDistance(ICoords other) {
@@ -41,6 +39,5 @@ public struct SquareCoords : ICoords {
         var horizontalMovesRequired = highest - lowest;
         return lowest * 14 + horizontalMovesRequired * 10 ;
     }
-
     public Vector2 Pos { get; set; }
 }

@@ -1,11 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
-
     public class ScriptableSquareGrid : ScriptableGrid
     {
-        [SerializeField,Range(3,50)] private int _gridWidth = 16;
-        [SerializeField,Range(3,50)] private int _gridHeight = 9;
-        
+        private int _gridWidth = 12;
+        private int _gridHeight =12;
         public override Dictionary<Vector2, NodeBase> GenerateGrid() {
             var tiles = new Dictionary<Vector2, NodeBase>();
             var grid = new GameObject {

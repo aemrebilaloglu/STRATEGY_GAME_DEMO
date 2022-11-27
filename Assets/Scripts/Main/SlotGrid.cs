@@ -1,14 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 public class SlotGrid : MonoBehaviour
 {
     DragAndDrop drop;
     public bool isGreen = false;
     public bool isSoldier = false;
-   
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Barrack"))
@@ -32,7 +27,6 @@ public class SlotGrid : MonoBehaviour
                         drop.gridList[i].transform.parent.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0.16f, 1, 0.12f, 1);
                     }
                 }
-                Debug.Log("zaa");
             }
         }
         if (other.CompareTag("Soldier"))

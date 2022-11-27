@@ -17,7 +17,7 @@ public class DragAndDrop : MonoBehaviour/*,IDragHandler,IBeginDragHandler,IEndDr
     {
         mainCamera = Camera.main;
         CameraZDistance =
-            mainCamera.WorldToScreenPoint(transform.position).z; //z axis of the game object for screen view
+            mainCamera.WorldToScreenPoint(transform.position).z; //z from screen
     }
     private void Update()
     {
@@ -36,13 +36,12 @@ public class DragAndDrop : MonoBehaviour/*,IDragHandler,IBeginDragHandler,IEndDr
     void OnMouseDrag()
     {
         Vector3 ScreenPosition =
-            new Vector3(Input.mousePosition.x, Input.mousePosition.y, CameraZDistance); //z axis added to screen point 
+            new Vector3(Input.mousePosition.x, Input.mousePosition.y, CameraZDistance); 
         Vector3 NewWorldPosition =
-            mainCamera.ScreenToWorldPoint(ScreenPosition); //Screen point converted to world point
+            mainCamera.ScreenToWorldPoint(ScreenPosition); //world p
 
         transform.parent.position = NewWorldPosition;
         transform.parent.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.65f);
-       
     }
     private void OnMouseDown()
     {
