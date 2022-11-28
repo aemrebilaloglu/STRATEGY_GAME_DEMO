@@ -46,10 +46,10 @@ using Random = UnityEngine.Random;
             if (BarracksManager.instance.SoldierUnit.transform.childCount < 2)
             {
                 if (!isSoldier) return;
-                //if (!Walkable) return;
                 GridManager.Instance.isTarget = false;
                 BarracksManager.instance.soldierMove = true;
                 OnHoverTile?.Invoke(this);
+                isSoldier = false;
             }
         }
         if (Input.GetMouseButtonDown(1))

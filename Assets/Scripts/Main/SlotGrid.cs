@@ -8,7 +8,7 @@ public class SlotGrid : MonoBehaviour
     {
         if (other.CompareTag("Barrack"))
         {
-            if (transform.parent.GetComponent<SquareNode>().Walkable)
+            if (transform.parent.GetComponent<SquareNode>().Walkable && transform.parent.GetComponent<SquareNode>().isSoldier ==false)
             {
                 isGreen = true;
                 drop = other.GetComponent<DragAndDrop>();
@@ -38,7 +38,7 @@ public class SlotGrid : MonoBehaviour
     {
         if (other.CompareTag("Barrack"))
         {
-            if (transform.parent.GetComponent<SquareNode>().Walkable)
+            if (transform.parent.GetComponent<SquareNode>().Walkable && transform.parent.GetComponent<SquareNode>().isSoldier == false)
             {
                 isGreen = false;
                 drop.gridList.Remove(gameObject);
@@ -47,7 +47,7 @@ public class SlotGrid : MonoBehaviour
         }
         if (other.CompareTag("Soldier"))
         {
-           transform.parent.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0.64f, 0.58f, 0.287f, 1);         
+           transform.parent.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0.64f, 0.58f, 0.287f, 1);
         }
     }
 }

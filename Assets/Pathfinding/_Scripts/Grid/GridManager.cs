@@ -5,8 +5,7 @@ using DG.Tweening;
 using System.Collections;
     public class GridManager : MonoBehaviour {
     public static GridManager Instance;
-
-    [SerializeField] private Sprite _playerSprite, _goalSprite;
+    [SerializeField] private Sprite _playerSprite;
     [SerializeField] private Unit _unitPrefab;
     [SerializeField] private ScriptableGrid _scriptableGrid;
     public Dictionary<Vector2, NodeBase> Tiles { get; private set; }
@@ -22,6 +21,7 @@ using System.Collections;
     private void OnDestroy() => NodeBase.OnHoverTile -= OnTileHover;
     public bool isTarget = false;
     private void OnTileHover(NodeBase nodeBase) {
+
         _goalNodeBase = nodeBase;
         if (!isTarget)
         {
@@ -37,6 +37,7 @@ using System.Collections;
         var path = Pathfinding.FindPath(_playerNodeBase, _goalNodeBase);
         if (isTarget)
         {
+            if (path.Count < 1)return;
             StartCoroutine(DelayMoveToPath());
             IEnumerator DelayMoveToPath()
             {
@@ -47,7 +48,10 @@ using System.Collections;
 
                     yield return new WaitForSeconds(0.25f);
                 }
-                BarracksManager.instance.SoldierUnit.transform.GetChild(1).parent = null;
+                if (BarracksManager.instance.SoldierUnit.transform.childCount > 1)
+                {
+                    BarracksManager.instance.SoldierUnit.transform.GetChild(1).parent = null;
+                }
 
                 BarracksManager.instance.soldierMove = false;
                 BarracksManager.instance.onMove = false;

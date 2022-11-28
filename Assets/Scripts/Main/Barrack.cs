@@ -1,13 +1,12 @@
 using System.Collections;
 using UnityEngine;
 using DG.Tweening;
-using TMPro;
 using UnityEngine.UI;
 public class Barrack : Buildings
 {
     public GameObject timeImg;
     public float soldierSpawnTime;
-    public TextMeshProUGUI soldierSpawnTimeText;
+    public Text soldierSpawnTimeText;
     BarracksManager bm;
     IEnumerator Start()
     {
@@ -18,21 +17,28 @@ public class Barrack : Buildings
     private void Awake()
     {
         bm = BarracksManager.instance;
-        bm.soldierCount = -1;
         timeImg.transform.DOLocalRotate(new Vector3(0, 0, -360), 2f, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Yoyo).OnUpdate(() =>
         {
-            soldierSpawnTime-=Time.deltaTime;
-            if (soldierSpawnTime < 0)
+            if (bm.soldierCount < 5)
             {
-                soldierSpawnTime = 5f;
-                bm.soldierCount++;
+                soldierSpawnTime-=Time.deltaTime;
+
+                if (soldierSpawnTime < 0)
+                {
+                    soldierSpawnTime = 5f;
+                    bm.soldierCount++;
+                }
+                soldierSpawnTimeText.text = "S/" + soldierSpawnTime .ToString("0");
             }
-            soldierSpawnTimeText.text = "S/" + soldierSpawnTime .ToString("0");
+            else
+            {
+                soldierSpawnTimeText.text = "FULL".ToString();
+            }
         });
     }
     public void SoldierSpawn()
     {
-        if (bm.soldierCount<6)
+        if (bm.soldierCount < 6)
         {
             SoldierSlot.instance.soldierSlot[bm.soldierCount].SetActive(true);
         }

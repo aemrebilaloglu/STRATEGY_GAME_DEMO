@@ -88,12 +88,10 @@ public class DragAndDrop : MonoBehaviour/*,IDragHandler,IBeginDragHandler,IEndDr
                     }
                     else if (isSoldier)
                     {
-                        Instantiate(Resources.Load("SpawnSoldier"), new Vector3(xPos, yPos, 0), Quaternion.identity);
                         transform.GetComponent<BoxCollider>().size = new Vector3(0.5f, 1f, 1f);
-
+                        Instantiate(Resources.Load("SpawnSoldier"), new Vector3(xPos, yPos, 0), Quaternion.identity);
                         SoldierSlot.instance.soldierSlot[BarracksManager.instance.soldierCount].SetActive(false);
                         BarracksManager.instance.soldierCount--;
-
                         if (BarracksManager.instance.SoldierUnit.transform.childCount>1)
                         {
                             BarracksManager.instance.SoldierUnit.transform.GetChild(1).parent = null;

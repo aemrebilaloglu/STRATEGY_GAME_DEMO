@@ -13,7 +13,6 @@ public class Buildings : MonoBehaviour
     public void CheckNames()
     {
         if (BarracksManager.instance.onMove) return;
-
         if (GetComponent<Image>().sprite.name == "Barrack")
         {
             UIManager.instance.powerPlant.transform.position = new Vector3(50, 50, 0);
@@ -42,7 +41,6 @@ public class Buildings : MonoBehaviour
             InformationManager.instance.selectedImage.GetComponent<Image>().sprite = GetComponent<Image>().sprite;
             InformationManager.instance.informationHead.text = "Barrack";
             InformationManager.instance.soldierImage.SetActive(true);
-
         }
         else if (GetComponent<Image>().sprite.name == "PowerPlant")
         {
@@ -51,5 +49,9 @@ public class Buildings : MonoBehaviour
             InformationManager.instance.informationHead.text = "Power Plant";
             InformationManager.instance.soldierImage.SetActive(false);
         }
+        //else if (GetComponent<Image>().sprite.name == "soldier")
+        //{
+        //    UIManager.instance.soldier.transform.GetChild(0).GetComponent<BoxCollider>().size = new Vector3(0.015f, 0.015f, 1);
+        //}
     }
 }
