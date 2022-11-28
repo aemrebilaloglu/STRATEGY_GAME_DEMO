@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6913782214135901196}
   - component: {fileID: 5407826890435766318}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Soldier Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 8591362028393434916}
   - component: {fileID: 68262353636642737}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Soldier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 7924130846426710815}
   - component: {fileID: 7924130846426710814}
   m_Layer: 0
-  m_Name: Power Plant Drag
+  m_Name: Soldier Drag
   m_TagString: Soldier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

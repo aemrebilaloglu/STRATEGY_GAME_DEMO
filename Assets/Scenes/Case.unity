@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 2269980}
   - component: {fileID: 2269979}
   m_Layer: 5
-  m_Name: line (6)
+  m_Name: line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 170076735}
   - component: {fileID: 170076734}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: directional-light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 178888676}
   - component: {fileID: 178888675}
   m_Layer: 5
-  m_Name: Image
+  m_Name: line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -514,7 +514,7 @@ GameObject:
   - component: {fileID: 198955742}
   - component: {fileID: 198955744}
   m_Layer: 5
-  m_Name: Information Panel
+  m_Name: information-panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -688,7 +688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 243236854}
   m_Layer: 5
-  m_Name: Panel Obj
+  m_Name: panel-Obj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -728,7 +728,7 @@ GameObject:
   - component: {fileID: 315151346}
   - component: {fileID: 315151345}
   m_Layer: 5
-  m_Name: ribon (2)
+  m_Name: ribon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 333965637}
   - component: {fileID: 333965636}
   m_Layer: 5
-  m_Name: Panteon
+  m_Name: Panteon Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1150,7 +1150,7 @@ GameObject:
   - component: {fileID: 520974014}
   - component: {fileID: 520974013}
   m_Layer: 5
-  m_Name: 1 (5)
+  m_Name: 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1284,7 +1284,7 @@ GameObject:
   - component: {fileID: 534669907}
   - component: {fileID: 534669908}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: main-camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1353,7 +1353,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &534669907
 MonoBehaviour:
@@ -1492,7 +1492,7 @@ GameObject:
   - component: {fileID: 756270555}
   - component: {fileID: 756270554}
   m_Layer: 5
-  m_Name: Head
+  m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1629,7 +1629,7 @@ GameObject:
   - component: {fileID: 769798689}
   - component: {fileID: 769798688}
   m_Layer: 5
-  m_Name: 1 (3)
+  m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1761,7 +1761,7 @@ GameObject:
   - component: {fileID: 801281765}
   - component: {fileID: 801281764}
   m_Layer: 5
-  m_Name: line (3)
+  m_Name: line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2046,7 +2046,7 @@ GameObject:
   - component: {fileID: 1089246364}
   - component: {fileID: 1089246363}
   m_Layer: 5
-  m_Name: line (2)
+  m_Name: line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2121,7 +2121,7 @@ GameObject:
   - component: {fileID: 1106826260}
   - component: {fileID: 1106826257}
   m_Layer: 7
-  m_Name: Barrack
+  m_Name: barrack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2289,7 +2289,7 @@ GameObject:
   - component: {fileID: 1115285859}
   - component: {fileID: 1115285858}
   m_Layer: 5
-  m_Name: 1 (1)
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2421,7 +2421,7 @@ GameObject:
   - component: {fileID: 1124190129}
   - component: {fileID: 1124190128}
   m_Layer: 5
-  m_Name: Panteon (1)
+  m_Name: Panteon Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2571,7 +2571,7 @@ GameObject:
   - component: {fileID: 1280232713}
   - component: {fileID: 1280232712}
   m_Layer: 0
-  m_Name: EventSystem
+  m_Name: event-system
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2623,7 +2623,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1355713766
 GameObject:
@@ -2639,7 +2639,7 @@ GameObject:
   - component: {fileID: 1355713771}
   - component: {fileID: 1355713770}
   m_Layer: 5
-  m_Name: 1 (2)
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2773,7 +2773,7 @@ GameObject:
   - component: {fileID: 1364984854}
   - component: {fileID: 1364984858}
   m_Layer: 5
-  m_Name: Main Canvas
+  m_Name: main-canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2854,7 +2854,7 @@ RectTransform:
   - {fileID: 1412769177}
   - {fileID: 7341151216655383299}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2888,7 +2888,7 @@ GameObject:
   - component: {fileID: 1365531100}
   - component: {fileID: 1365531099}
   m_Layer: 5
-  m_Name: line (5)
+  m_Name: line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2961,10 +2961,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1412769177}
   - component: {fileID: 1412769180}
-  - component: {fileID: 1412769179}
   - component: {fileID: 1412769178}
   m_Layer: 5
-  m_Name: Game Board
+  m_Name: game-board
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3005,36 +3004,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1412769179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412769176}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.37254903, g: 0.8, b: 0.16078432, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1412769180
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3136,7 +3105,7 @@ GameObject:
   - component: {fileID: 1488827112}
   - component: {fileID: 1488827111}
   m_Layer: 5
-  m_Name: 1 (4)
+  m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3268,7 +3237,7 @@ GameObject:
   - component: {fileID: 1770040211}
   - component: {fileID: 1770040210}
   m_Layer: 5
-  m_Name: ribon (3)
+  m_Name: ribon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3343,7 +3312,7 @@ GameObject:
   - component: {fileID: 1872980640}
   - component: {fileID: 1872980639}
   m_Layer: 7
-  m_Name: PowerPlant
+  m_Name: powerPlant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3448,7 +3417,7 @@ GameObject:
   - component: {fileID: 1890944890}
   - component: {fileID: 1890944889}
   m_Layer: 5
-  m_Name: line (4)
+  m_Name: line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3523,7 +3492,7 @@ GameObject:
   - component: {fileID: 1905766194}
   - component: {fileID: 1905766193}
   m_Layer: 7
-  m_Name: Soldier
+  m_Name: soldier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3628,7 +3597,7 @@ GameObject:
   - component: {fileID: 1949849994}
   - component: {fileID: 1949849997}
   m_Layer: 0
-  m_Name: Game Manager
+  m_Name: game-manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3658,7 +3627,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1949849997
 MonoBehaviour:
@@ -3765,7 +3734,7 @@ GameObject:
   - component: {fileID: 2055811874}
   - component: {fileID: 2055811873}
   m_Layer: 5
-  m_Name: line (1)
+  m_Name: line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3840,7 +3809,7 @@ GameObject:
   - component: {fileID: 2074512146}
   - component: {fileID: 2074512145}
   m_Layer: 5
-  m_Name: ribon (1)
+  m_Name: ribon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3994,7 +3963,7 @@ GameObject:
   - component: {fileID: 2136668496}
   - component: {fileID: 2136668495}
   m_Layer: 5
-  m_Name: Head
+  m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4072,7 +4041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2136776719}
   m_Layer: 5
-  m_Name: Lines
+  m_Name: lines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4154,7 +4123,7 @@ GameObject:
   - component: {fileID: 6572265302050710139}
   - component: {fileID: 6572265302050710132}
   m_Layer: 5
-  m_Name: Infinity Scroll
+  m_Name: infinity-scroll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4243,7 +4212,7 @@ GameObject:
   - component: {fileID: 6572265302111616652}
   - component: {fileID: 6572265302111616371}
   m_Layer: 5
-  m_Name: Viewport
+  m_Name: viewport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4279,7 +4248,7 @@ GameObject:
   - component: {fileID: 6572265302669823536}
   - component: {fileID: 6572265302669823543}
   m_Layer: 5
-  m_Name: Content
+  m_Name: content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4393,7 +4362,7 @@ GameObject:
   - component: {fileID: 6572265302971696324}
   - component: {fileID: 6572265302971696325}
   m_Layer: 5
-  m_Name: ScrollView Left
+  m_Name: scrollView-left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4474,7 +4443,7 @@ GameObject:
   - component: {fileID: 7341151216655383299}
   - component: {fileID: 7341151216655383298}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: grid-manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
